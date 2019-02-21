@@ -3,20 +3,13 @@
 CERTBOT="certbot -q"
 
 EMAIL=
-MX_HOSTNAME=
-
-SPG_HOSTNAME=
-SPG_USERNAME=
-SPG_PASSWORD=
+HOSTNAME=
 
 . `dirname $0`/`basename $0 .sh`.conf
 
-CERT=/etc/letsencrypt/live/${MX_HOSTNAME}/fullchain.pem
-KEY=/etc/letsencrypt/live/${MX_HOSTNAME}/privkey.pem
-
-FLAGFILE=/etc/letsencrypt/live/${MX_HOSTNAME}/deployed
-TIMESTAMP=`date --rfc-3339=seconds`
-COMMENT="${MX_HOSTNAME} (certbot ${TIMESTAMP})"
+CERT=/etc/letsencrypt/live/${HOSTNAME}/fullchain.pem
+KEY=/etc/letsencrypt/live/${HOSTNAME}/privkey.pem
+FLAGFILE=/etc/letsencrypt/live/${HOSTNAME}/deployed
 
 
 if [ ! -d /etc/letsencrypt/accounts ]; then
@@ -24,9 +17,9 @@ if [ ! -d /etc/letsencrypt/accounts ]; then
 	touch $CERTFILE
 fi
 if [ ! -f $CERT ]; then
-	$CERTBOT certonly -d $MX_HOSTNAME --standalone
+	$CERTBOT certonly -d $HOSTNAME --standalone
 else
-	$CERTBOT renew --reuse-key --cert-name $MX_HOSTNAME --standalone
+	$CERTBOT renew --reuse-key --cert-name $HOSTNAME --standalone
 fi
 
 if [ ! -f $CERT -o ! -f $KEY ]; then
