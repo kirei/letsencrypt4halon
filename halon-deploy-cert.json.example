@@ -1,0 +1,11 @@
+{
+	"hostname": "hostname.example.com",
+	"username": "certbot",
+	"password": "mekmitasdigoat",
+	"certname": "mx.example.com",
+	"pki_key": "letsencrypt",
+	"certfile": "hostname.crt",
+	"keyfile": "hostname.key",
+	"deploy": true,
+	"archive_path": "."
+}
