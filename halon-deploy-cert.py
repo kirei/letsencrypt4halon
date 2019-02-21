@@ -22,7 +22,7 @@ with open(config['keyfile']) as key_file:
 # construct new PKI parameters
 pki_key = f"pki__{config['pki_key']}"
 pki_params = [
-    f"{config['certname']} by certbot {timestamp}",
+    f"{config['certname']} (certbot {timestamp})",
     "x509+privatekey",
     base64.b64encode((pki_cert + pki_key).encode()).decode()
 ]
