@@ -35,6 +35,6 @@ if [ ! -f $CERT -o ! -f $KEY ]; then
 fi
 
 if [ ! -f $FLAGFILE -o $CERT -nt $FLAGFILE ]; then
-	echo "Cert updated, deployment needed."
+	(cd /etc/letsencrypt; ./halon-deploy-cert.py)
+	touch $FLAGFILE
 fi
-
