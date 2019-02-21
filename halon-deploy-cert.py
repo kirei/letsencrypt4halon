@@ -56,7 +56,8 @@ for c in last_halon_config['config']:
 
 # deploy configuration
 if config.get('deploy', False):
-    response = session.post(f"{halon_url}/config/revisions/{next_halon_revision}", json=next_halon_config)
+    response = session.post(f"{halon_url}/config/revisions/{next_halon_revision}",
+                            json=next_halon_config)
     print(response.status_code)
     print(response.text)
     response.raise_for_status()
