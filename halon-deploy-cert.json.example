@@ -6,6 +6,5 @@
 	"pki_key": "letsencrypt",
 	"certfile": "hostname.crt",
 	"keyfile": "hostname.key",
-	"deploy": true,
-	"archive_path": "."
+	"deploy": true
 }
