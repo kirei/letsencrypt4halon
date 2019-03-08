@@ -2,6 +2,7 @@
 	"hostname": "hostname.example.com",
 	"username": "certbot",
 	"password": "mekmitasdigoat",
+	"cacert": "ca.pem",
 	"certname": "mx.example.com",
 	"pki_key": "letsencrypt",
 	"certfile": "hostname.crt",
