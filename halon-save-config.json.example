@@ -1,0 +1,7 @@
+{
+	"hostname": "hostname.example.com",
+	"username": "certbot",
+	"password": "mekmitasdigoat",
+	"cacert": "ca.pem",
+	"archive_path": "."
+}
