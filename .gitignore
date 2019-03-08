@@ -1,0 +1,7 @@
+halon-deploy-cert.json
+halon-save-config.json
+halon-letsrenew.conf
+halon-config-*.json
+*.crt
+*.key
+*.pem
