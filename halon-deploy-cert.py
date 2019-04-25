@@ -1,11 +1,12 @@
-#!/usr/bin/env python3.6
+#!/usr/bin/env python3.7
 
-import json
-import requests
+"""Deploy certificate to Halon"""
+
 import base64
+import json
 from datetime import datetime, timezone
 
-
+import requests
 
 # read configuration
 with open('halon-deploy-cert.json') as input_file:

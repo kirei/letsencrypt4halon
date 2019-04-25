@@ -1,11 +1,12 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.7
 
-import json
-import requests
+"""Fetch configuration from HALON and save as JSON"""
+
 import base64
+import json
 from datetime import datetime, timezone
 
-
+import requests
 
 # read configuration
 with open('halon-save-config.json') as input_file:
